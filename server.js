@@ -19,6 +19,7 @@ app.use("/*", function (req, res) {
 });
 
 db.sync({ force: false }).then(() => {
+  console.log("Database connected");
   app.listen(PORT, () => {
     console.log("Escuchando en el puerto ", PORT);
   });
